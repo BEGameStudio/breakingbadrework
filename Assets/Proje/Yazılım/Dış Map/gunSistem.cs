@@ -22,6 +22,12 @@ public class gunSistem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gunYazdir();
+    }
+
+
+    public void gunYazdir()
+    {
         gunYazi = saatObje.GetComponent<saatSistem>().Gun;
 
 

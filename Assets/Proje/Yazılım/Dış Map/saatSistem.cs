@@ -21,13 +21,19 @@ public class saatSistem : MonoBehaviour
     }
     void Update()
     {
+
+        gunSaat();
         
 
-        
+       
+    }
 
-      dakika = Mathf.Floor(Timer / 60);       //SANİYEYİ DAKİKA GİBİ KULLAN GÜN DAHA HIZLI GEÇSİN
-      saniye = Mathf.Floor(Timer % 60);
-       Timer += Time.deltaTime *5;
+    public void gunSaat()
+
+    {
+        dakika = Mathf.Floor(Timer / 60);       //SANİYEYİ DAKİKA GİBİ KULLAN GÜN DAHA HIZLI GEÇSİN
+        saniye = Mathf.Floor(Timer % 60);
+        Timer += Time.deltaTime * 5;
         //  string second = LeadingZero(time.Second);
         if (Timer >= 0 && Timer <= 600)
         {
@@ -56,14 +62,16 @@ public class saatSistem : MonoBehaviour
 
 
         if (Timer >= 1440)
-        {                       
+        {
             Timer = 0;
             Gun += 1;
-            
-        } 
+
+        }
     }
-    string LeadingZero(int n)
+
+
+  /*  string LeadingZero(int n)
     {
         return n.ToString().PadLeft(2, '0');
-    }
+    } */
 }
